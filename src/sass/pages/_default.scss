@@ -1,0 +1,60 @@
+.wrapper {
+	margin-top: 10rem;
+}
+
+.posts {
+	display: flex;
+	flex-wrap: wrap;
+	min-width: 300px;
+	transition: all 300ms ease-in;
+	&__news:first-child {
+		flex-grow: 1;
+		flex-basis: 100%;
+		height: 500px;
+		background-image: url('https://placeimg.com/1180/500/tech');
+		transition: all 300ms ease-in;
+	}
+	&__news {
+		background-image: url('https://placeimg.com/300/700/tech');
+		background-position: center;
+		background-size: cover;
+		background-color: $clr-blue;
+		cursor: pointer;
+		padding: 2rem;
+		display: flex;
+		align-items: flex-end;
+		flex: 1;
+		height: 300px;
+		transition: all 300ms ease-in;
+		position: relative;
+		&::after {
+			content: '';
+			color: red;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-image: linear-gradient(to top, #000, transparent);
+			opacity: .8;
+			transition: all 300ms ease-in;
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+		&-details {
+			z-index: 1;
+			transition: all 300ms ease-in;
+			.data {
+				display: block;
+				font-weight: 700;
+				color: $clr-yellow;
+			}
+		}
+		.tag {
+			position: absolute;
+			top: 5px;
+			left: 10px;
+		}
+	}
+}

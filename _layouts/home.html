@@ -1,0 +1,22 @@
+---
+ layout: default
+---
+   {{content}}
+
+<section class="older-posts">
+	<h2>Older posts</h2>
+	{% for post in site.posts  %}
+	<div class="blog-post">
+
+		<li>
+			<p><a class="blog__title"href="{{post.url}}">{{post.title}} {{post.date | date: "%d/%m/%y"}}</a>
+			<p class="post__desc">{{post.description}}</p>
+			<a href="{{post.url}}" class="blog__link">Read More</a>
+		</li>
+
+	</div>
+	{% endfor %}
+
+</section>
+
+

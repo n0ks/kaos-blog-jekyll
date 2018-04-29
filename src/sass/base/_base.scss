@@ -1,0 +1,39 @@
+body {
+	padding: 0;
+}
+
+a {
+	color: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+ul,
+li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	@include clearfix;
+	width: 1020px;
+	margin: 0 auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	@media (max-width: 1032px) {
+		& {
+			width: 900px;
+		}
+	}
+	@media(max-width:918px) {
+		& {
+			width: 780px;
+		}
+	}
+	@media(max-width:780px) {
+		width: 100%;
+	}
+}

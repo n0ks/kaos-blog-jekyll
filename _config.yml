@@ -1,0 +1,15 @@
+
+
+
+# Site variables
+name: Kaos Blog
+email: contato@kaos.com.br
+fb_page: "https://www.facebook.com/fratkaos/"
+
+#Site options
+permalink: /:title/
+baseurl: ""
+
+#Project customs
+markdown: kramdown
+exclude: ['*.json', 'src', 'node_modules','gulpfile.js']
