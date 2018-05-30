@@ -1,62 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
+{%seo%}
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width={device-width}, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta http-equiv="content-language" content="pt-br">
-	<meta name="author" content="{{page.author}}">
-	<title>{{page.title}}</title>
-	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-	<link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+	<meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}"
+	/> 
+	<!-- <title> {%if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}</title> -->
+	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+	{% include _font.html %}
 </head>
-
 <body>
 	{% include nav.html %}
+	{{content}}
+	{% include footer.html %}
 
-	<main class="wrapper">
-
-
-		<div class="container">
-			<section class="posts">
-				<article class="posts__news">
-					<div class="tag">
-						<a href="#tagg">TAGS</a>
-					</div>
-					<div class="posts__news-details">
-						<h1>Artigo 1</h1>
-						<span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, sed?</span>
-						<span class="data">28/04/2018</span>
-					</div>
-				</article>
-				<article class="posts__news">
-					<div class="tag">
-						<a href="#">TAGS</a>
-					</div>
-					<div class="posts__news-details">
-						<h1>Artigo 2</h1>
-						<span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, sed?</span>
-						<span class="data">28/04/2018</span>
-					</div>
-				</article>
-				<article class="posts__news">
-					<div class="tag">
-						<a href="#">TAGS</a>
-					</div>
-					<div class="posts__news-details">
-						<h1>Artigo 3</h1>
-						<span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, sed?</span>
-						<span class="data">28/04/2018</span>
-
-					</div>
-				</article>
-			</section>
-		</div>
-
-	</main>
-
-
+	<script src="{{site.baseurl}}/assets/js/bundle.js"></script>
 </body>
-
 </html>

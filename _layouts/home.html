@@ -1,22 +1,26 @@
+--- 
+layout: default
 ---
- layout: default
----
-   {{content}}
-
-<section class="older-posts">
-	<h2>Older posts</h2>
-	{% for post in site.posts  %}
-	<div class="blog-post">
-
-		<li>
-			<p><a class="blog__title"href="{{post.url}}">{{post.title}} {{post.date | date: "%d/%m/%y"}}</a>
-			<p class="post__desc">{{post.description}}</p>
-			<a href="{{post.url}}" class="blog__link">Read More</a>
-		</li>
-
+<main class="wrapper">
+	<div class="container">
+		<section class="posts">
+			{% for post in site.posts limit:4 %}
+			<article class="posts__news" onclick='window.location = {{post.url}}' style="background-image: url({{post.thumb}})">
+				<div class="tag">
+					<a href="#tagg">{{post.categories | join: ','}}</a>
+				</div>
+				<div class="posts__news-details">
+					<h1>{{post.title}}</h1>
+					<span>{{post.description}}</span>
+					<span class="data">{{post.date | date: "%d/%m/%y"}}</span>
+				</div>
+			</article>
+			{% endfor %}
+		</section>
+		<div class="container-card">
+			{% for post in site.posts offset: 4 %}
+				{% include news_cards.html %}
+			{% endfor %}
+		</div>
 	</div>
-	{% endfor %}
-
-</section>
-
-
+</main>
