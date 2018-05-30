@@ -1,0 +1,29 @@
+footer {
+	margin-top: 40vh;
+	background-image: linear-gradient(to top, #434343 -120%, black 40%);
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+.footer {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	h4 { 
+		color: $clr-yellow-2;
+		font-size: 1.3em;
+	}
+	a{
+		text-decoration: none;
+	}
+	>* {
+		flex-basis: 220px;
+		&:not(:first-child) {
+			padding-left: 5rem;
+			border-left: 1px solid rgba($clr-grey, .2);
+		}
+		& li {
+			height: 36px;
+			line-height: 28px;
+		}
+	}
+}

@@ -6,16 +6,13 @@
 	display: flex;
 	flex-wrap: wrap;
 	min-width: 300px;
-	transition: all 300ms ease-in;
 	&__news:first-child {
 		flex-grow: 1;
 		flex-basis: 100%;
-		height: 500px;
-		background-image: url('https://placeimg.com/1180/500/tech');
-		transition: all 300ms ease-in;
+		height: 500px; // background-image: url('https://placeimg.com/1180/500/tech');
 	}
 	&__news {
-		background-image: url('https://placeimg.com/300/700/tech');
+		// background-image: url('https://placeimg.com/300/700/tech');
 		background-position: center;
 		background-size: cover;
 		background-color: $clr-blue;
@@ -25,7 +22,6 @@
 		align-items: flex-end;
 		flex: 1;
 		height: 300px;
-		transition: all 300ms ease-in;
 		position: relative;
 		&::after {
 			content: '';
@@ -49,6 +45,9 @@
 				display: block;
 				font-weight: 700;
 				color: $clr-yellow;
+			}
+			h1{
+				font-size: 2.8rem;
 			}
 		}
 		.tag {

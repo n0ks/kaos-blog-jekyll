@@ -6,9 +6,14 @@
 @import 'base/typo';
 @import 'base/utilities';
 @import 'base/base';
+@import 'base/animations';
 
+@import 'components/paginator';
 @import 'components/tags';
+@import 'components/cards';
 
+@import 'layout/topbar';
 @import 'layout/header';
+@import 'layout/footer';
 
 @import 'pages/default';

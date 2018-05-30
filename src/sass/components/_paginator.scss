@@ -1,0 +1,30 @@
+.pagination {
+	text-align: center;
+	background-color: #fff;
+	display: inline-block;
+	border-radius: 5px;
+	overflow: hidden;
+	&__control {
+		&--active {
+			background-color: $clr-yellow !important;
+			color: $clr-black-1 !important;
+		}
+		&--done {
+			background-color: $clr-grey;
+		}
+	}
+	& a,
+	& span {
+		padding: 1rem 1.5rem;
+		margin-left: -2px;
+		margin-right: -2px;
+		background-color: $clr-white;
+		display: inline-block;
+		color: $clr-grey;
+	}
+	& a {
+		&:hover {
+			background-color: #f1f1f1;
+		}
+	}
+}

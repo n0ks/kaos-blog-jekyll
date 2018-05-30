@@ -1,0 +1,17 @@
+.topbar {
+	height: 40px;
+	background-color: $clr-black-2;
+	&__social {
+		margin: .7rem 0;
+		float: right;
+		a {
+			text-decoration: none;
+			&:not(:last-child) {
+				margin-right: 1rem;
+			}
+			&:hover {
+				color: $clr-yellow;
+			}
+		}
+	}
+}
