@@ -2,8 +2,9 @@
 layout: default
 title: Second Post
 description: simple description 2
-categories: news
+categories: tech test
 author: Rodrigo M.
+thumb: /assets/img/2018-05/second-post.jpeg
 ---
-## Posting again
+
 Its working

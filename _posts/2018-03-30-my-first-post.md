@@ -2,11 +2,10 @@
 layout: default
 title: First Post
 description: simple description
-categories: news
+categories: tech
 author: Rodrigo M.
-
+thumb: /assets/img/2018-05/my-post-1.jpg
 ---
-## Very first Post
 Testando 123
 
 ![img](/assets/img/kaos-logo.png)
