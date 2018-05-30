@@ -1,15 +1,20 @@
-
-
-
-# Site variables
+#Site options
 name: Kaos Blog
 email: contato@kaos.com.br
-fb_page: "https://www.facebook.com/fratkaos/"
+url: http://localhost:3000
+facebook: 
+  publisher: https://www.facebook.com/fratkaos/
 
-#Site options
-permalink: /:title/
-baseurl: ""
-
-#Project customs
+# Build Options
 markdown: kramdown
-exclude: ['*.json', 'src', 'node_modules','gulpfile.js']
+permalink: /:title/
+lang: pt_BR
+plugins:
+- jekyll-seo-tag
+- jekyll-paginate
+
+paginate: 2
+paginate_path: /noticias/page-:num/
+
+exclude: ['*.json', 'src', 'node_modules','gulpfile.js','Gemfile','Gemfile.lock','README.md']
+include: ['_pages']

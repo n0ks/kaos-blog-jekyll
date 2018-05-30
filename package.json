@@ -1,32 +1,41 @@
 {
-  "name": "kaos-blog-jekyll",
-  "version": "1.0.0",
-  "description": "Blog em jekyll Fraternidade Kaos",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/n0ks/kaos-blog-jekyll.git"
-  },
-  "author": "Rodrigo Martins",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/n0ks/kaos-blog-jekyll/issues"
-  },
-  "homepage": "https://github.com/n0ks/kaos-blog-jekyll#readme",
-  "devDependencies": {
-    "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-sass": "^4.0.0",
-    "gulp-uglify-es": "^1.0.1"
-  },
-  "dependencies": {
-    "sanitize.css": "^5.0.0"
-  }
+	"name": "kaos-blog-jekyll",
+	"version": "1.0.0",
+	"description": "Blog em jekyll Fraternidade Kaos",
+	"main": "index.js",
+	"scripts": {
+		"test": "xo"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/n0ks/kaos-blog-jekyll.git"
+	},
+	"author": "Rodrigo Martins",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/n0ks/kaos-blog-jekyll/issues"
+	},
+	"homepage": "https://github.com/n0ks/kaos-blog-jekyll#readme",
+	"devDependencies": {
+		"browser-sync": "^2.24.4",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^5.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-imagemin": "^4.1.0",
+		"gulp-plumber": "^1.2.0",
+		"gulp-sass": "^4.0.1",
+		"gulp-uglify-es": "^1.0.1",
+		"xo": "^0.20.3"
+	},
+	"dependencies": {
+		"sanitize.css": "^5.0.0"
+	},
+	"xo": {
+		"semicolon": false,
+		"prettier": true,
+		"esnext": true,
+		"env": [
+			"browser"
+		]
+	}
 }

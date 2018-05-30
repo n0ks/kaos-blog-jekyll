@@ -1,65 +1,78 @@
-var gulp = require('gulp'),
-	browserSync = require('browser-sync').create(),
-	uglifyes = require('gulp-uglify-es').default,
-	concat = require('gulp-concat'),
-	prefixer = require('gulp-autoprefixer'),
-	imagemin = require('gulp-imagemin'),
-	plumber = require('gulp-plumber'),
-	sass = require('gulp-sass'),
-	cp = require('child_process');
+'use strict'
+const cp = require('child_process')
+const gulp = require('gulp')
+const browserSync = require('browser-sync').create()
+const uglifyes = require('gulp-uglify-es').default
+const concat = require('gulp-concat')
+const prefixer = require('gulp-autoprefixer')
+const imagemin = require('gulp-imagemin')
+const plumber = require('gulp-plumber')
+const sass = require('gulp-sass')
 
-var messages = {
-	jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
-};
+const messages = {
+	jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build',
+}
 
-gulp.task('jekyll-build', function (done) {
-	browserSync.notify(messages.jekyllBuild);
-	return cp.spawn('jekyll.bat', ['build'], { stdio: 'inherit' }).on('close', done);
-});
 
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-	browserSync.reload();
+gulp.task('jekyll-build', (done) => {
+	browserSync.notify(messages.jekyllBuild)
+	return cp
+		.spawn('bundle.bat', ['exec', 'jekyll', 'build'], {
+			stdio: 'inherit',
+		})
+		.on('close', done)
 })
 
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function () {
+gulp.task('jekyll-rebuild', ['jekyll-build'], () => {
+	browserSync.reload()
+})
+
+gulp.task('browser-sync', ['sass', 'jekyll-build'], () => {
 	browserSync.init({
 		server: {
-			baseDir: '_site'
-		}
+			baseDir: '_site',
+		},
+		port: 4000,
+		ui: {
+			port: 4001,
+		},
 	})
 })
 
-gulp.task('sass', function () {
-	return gulp.src('./src/sass/main.scss')
+gulp.task('sass', () => {
+	return gulp
+		.src('./src/sass/main.scss')
 		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-		.pipe(prefixer({ browsers: ['last 2 versions', '> 1%', 'Firefox ESR'] }))
+		.pipe(prefixer({ browsers: ['last 2 versions'] }))
 		.pipe(gulp.dest('./_site/assets/css/'))
 		.pipe(gulp.dest('assets/css'))
 		.pipe(browserSync.stream())
-});
+})
 
-gulp.task('js', function () {
-	return gulp.src('./src/js/**/*.js')
+gulp.task('js', () => {
+	return gulp
+		.src('./src/js/**/*.js')
 		.pipe(plumber())
-		.pipe(concat('main.js'))
+		.pipe(concat('bundle.js'))
 		.pipe(uglifyes())
+		.pipe(gulp.dest('./_site/assets/js/'))
 		.pipe(gulp.dest('./assets/js/'))
+})
 
-});
-
-gulp.task('imagemin', function () {
-	return gulp.src('./src/img/**/*')
+gulp.task('imagemin', () => {
+	return gulp
+		.src('./src/img/**/*')
 		.pipe(plumber())
-		.pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+		.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
 		.pipe(gulp.dest('./_site/assets/img/'))
 		.pipe(gulp.dest('./assets/img/'))
-});
+})
 
-gulp.task('watch', function () {
-	gulp.watch('./src/sass/**/**/*.scss', ['sass']);
-	gulp.watch('./src/js/**/*.js', ['js']);
-	gulp.watch('./src/img/**/*.{jpg,png,gif}', ['imagemin']);
-	gulp.watch(['*.html', '_layouts/*.html','_includes/*.html', '_posts/*'], ['jekyll-rebuild'])
-});
+gulp.task('watch', () => {
+	gulp.watch('./src/sass/**/*.scss', ['sass'])
+	gulp.watch('./src/js/**/*.js', ['js'])
+	gulp.watch('./src/img/**/*.{jpg,png,gif,svg}', ['imagemin'])
+	gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*'],	['jekyll-rebuild'])
+})
 
-gulp.task('default', ['sass', 'js', 'imagemin','browser-sync', 'watch']);
+gulp.task('default', ['sass', 'js', 'imagemin', 'browser-sync', 'watch'])
