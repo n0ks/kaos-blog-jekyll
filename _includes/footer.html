@@ -1,0 +1,38 @@
+<footer>
+	<div class="container footer">
+			<div class="footer__categories">
+					<ul>
+						<li>
+							<h4>Últimos Posts</h4>
+						</li>
+						{% for post in site.posts limit: 3 %} 
+						<li><a href="{{post.url}}">{{post.title  | upcase}}</a></li>
+						{% endfor %}
+		
+					</ul>
+				</div>
+		<div class="footer__categories">
+			<ul>
+				<li>
+					<h4>Categorias</h4>
+				</li>
+				{% for category in site.categories %} {% capture category_name  %}{{ category | first | capitalize}}{% endcapture %}
+				<li>{{category_name }}</li>
+				{% endfor %}
+
+			</ul>
+		</div>
+
+		<div class="footer__contatos">
+			<ul>
+				<li>
+					<h4>Contato</h4>
+				</li>
+				<li>
+					<a href="mailto:contato@kaos.com.br" target="_top">contato@kaos.com.br</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</footer>

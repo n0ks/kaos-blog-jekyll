@@ -9,24 +9,33 @@
 			</a>
 		</div>
 	</div>
+</div>
 
+<div class="menu-toggle">
+	<div class="hamburger"></div>
 </div>
 <div class="header">
 	<div class="container">
 		<div class="header__main-area">
-			<div class="header__menu">
-
-				<nav class="header__navbar">
-					<ul class="header__navbar-nav">
-						<li class="header__navbar-nav-items">
-							<a href="#">Inicio</a>
-						</li>
-						<li class="header__navbar-nav-items">
-							<a href="#">Notícias</a>
-						</li>
-					</ul>
-				</nav>
+			<div class="header__logo">
+				<a href="{{site.facebook.publisher}}">
+					<svg class="header__logo-valknut" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 54 62.5">
+						<path d="M39 40.1l4.3 7.9H9.7l18-32.6-.6-.3.6.3 6.1-11.2L50.6 35H19.8v2H54L33.8 0l-7.9 14.5L6.3 50h40.4l-5.9-10.8-1.8.9zm-9.5-21.6l-1.8 1L35 32.7l1.8-1-7.3-13.2zM11.7 35H3.4L20.2 4.2l3.8 7 1.8-1L20.2 0 0 37h11.7v-2z"
+						/>
+					</svg>
+				</a>
 			</div>
+			<nav class="header__navbar">
+				<ul class="header__navbar-nav">
+
+					<li class="header__navbar-nav-items">
+						<a href="/" {% if page.url == "/" %} class="active"	{% endif %}>Inicio</a>
+					</li>
+					<li class="header__navbar-nav-items">
+						<a href="/noticias/" {% if page.url contains "/noticias/" %} class="active"	{% endif %}>Notícias</a>
+					</li>
+				</ul>
+			</nav>
 		</div>
 	</div>
 </div>

@@ -1,0 +1,25 @@
+<!-- Usar dentro de um loop -->
+<div class="card">
+	<div class="card__picture " onclick='window.location = {{post.url}}'>
+		<img src="{{post.thumb}}" alt="Post image" class="card__picture--img">
+	</div>
+	<div class="card__content">
+		<span class="data">{{post.date | date: "%d/%m/%y"}}</span>
+		<h2 class="card__heading">
+			<a href="{{post.url}}">{{post.title}}</a>
+		</h2>
+		<div class="card__excerpt">
+			{{post.description}}
+		</div>
+		<div class="card__footer">
+			<div class="card__author">
+				<i class="fas fa-user fa-xs fa-fw"></i>
+				{{post.author}}
+			</div>
+			<div class="card__categories">
+				<i class="fas fa-tags fa-xs fa-fw"></i>
+				<span>{{post.categories | join: ','}}</span>
+			</div>
+		</div>
+	</div>
+</div>
