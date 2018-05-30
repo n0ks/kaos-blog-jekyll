@@ -7,6 +7,10 @@
 - [Ruby 2.3.3 p222](https://rubyinstaller.org/downloads/)
 - [Setup](http://jekyll-windows.juthilo.com/)
 
+## 30/05/2018
+- News cards
+- Paginação
+- Footer
 ## Primeiro Commit 
 
 - Começando parte do layout **default** inicial.
