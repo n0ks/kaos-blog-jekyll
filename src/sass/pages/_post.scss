@@ -1,0 +1,43 @@
+.post {
+	&__banner {
+		min-height: 45rem; // background-color: $clr-blue;
+		position: relative;
+		@include flex;
+	}
+	&__title{
+		font-size: 5rem;
+		text-transform: uppercase;
+		text-shadow: 4px 2px 0 rgba($clr-blue,1)
+	}
+	&__content {
+		padding: 2rem 0;
+		background-color: $clr-white;
+		color: $clr-black-2;
+		margin-bottom: 10rem;
+		& h1,
+		h2,
+		p {
+			letter-spacing: 0.5px;
+			line-height: 2;
+			max-width: 92rem;
+			text-size-adjust: 100%;
+			padding-left: 2rem;
+			margin: 0 auto 3rem;
+		}
+		& h1,
+		h2 {
+			line-height: 3;
+		}
+		& p {
+			font-size: 1.8rem;
+			text-align: justify;
+		}
+	}
+	&__comments {
+		max-width: 80rem;
+		margin: 0 auto;
+	}
+	&__share{
+		width: 80rem;
+	}
+}
