@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: testando
 description: testando
 categories: food

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Titulo simples
 description: alo alo alo
 categories: comida

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Second Post
 description: simple description 2
 categories: tech test
