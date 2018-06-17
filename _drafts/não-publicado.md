@@ -6,6 +6,9 @@ description: >-
   voluptates quaerat adipisci laborum
 categories:
   - god
+  - test
 author: Rogerin
-thumb: 'http://www.acritica.com/uploads/news/image/746820/show_godofwarps4.JPG'
+thumb: 'https://i.ytimg.com/vi/2a4Uxdy9TQY/maxresdefault.jpg'
 ---
+
+Blablablabla o post n&atilde;o ta publicado ,testando CloudCannon
