@@ -5,6 +5,7 @@ url: http://localhost:3000
 facebook: 
   publisher: https://www.facebook.com/fratkaos/
 
+disqus: kaos-blog-1
 # Build Options
 markdown: kramdown
 permalink: /:title/
