@@ -1,0 +1,31 @@
+--- 
+layout: default
+---
+<!-- <script id="dsq-count-scr" src="//kaos-blog-1.disqus.com/count.js" async></script> -->
+<section class="post">
+	
+	<div class="post__banner" style="background: url({{page.thumb}}) no-repeat; background-size: cover">
+		
+		<div class="container text-center">
+			<time datetime="{{page.date}}">
+				{{ page.date | date_to_string }}
+			<!-- Whitespace added for readability -->
+			</time>
+			<h1 class="post__title">{{page.title}}</h1>
+			<div class="post__desc">{{page.description}}</div>
+			
+		</div>
+	</div>
+	<article class="post__content" role="article">
+			{{content}}
+			<div class="container">
+				<div class="post__share">
+					{% include share_btns.html %}
+				</div>
+			</div>
+	</article>
+
+	<section class="post__comments">
+		{% include disqus.html %}
+	</section>
+</section>
