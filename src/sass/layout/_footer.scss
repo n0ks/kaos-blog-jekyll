@@ -1,22 +1,20 @@
-footer {
+.footer {
 	margin-top: 40vh;
 	background-image: linear-gradient(to top, #434343 -120%, black 40%);
-	padding-top: 5rem;
-	padding-bottom: 5rem;
-}
-.footer {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	h4 { 
+	width: 100%;
+	white-space: nowrap;
+	h4 {
 		color: $clr-yellow-2;
 		font-size: 1.3em;
 	}
-	a{
+	a {
 		text-decoration: none;
 	}
 	>* {
-		flex-basis: 220px;
+		flex-basis: 280px;
 		&:not(:first-child) {
 			padding-left: 5rem;
 			border-left: 1px solid rgba($clr-grey, .2);
@@ -24,6 +22,17 @@ footer {
 		& li {
 			height: 36px;
 			line-height: 28px;
+		}
+	}
+	@include mobile {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		>* {
+			width: 100%;
+			&:not(:first-child) {
+				padding: 0 1rem;
+			}
 		}
 	}
 }

@@ -1,6 +1,6 @@
 .post {
 	&__banner {
-		min-height: 45rem; // background-color: $clr-blue;
+		min-height: 45rem;
 		position: relative;
 		@include flex;
 	}
@@ -13,7 +13,6 @@
 		padding: 2rem 0;
 		background-color: $clr-white;
 		color: $clr-black-2;
-		margin-bottom: 10rem;
 		& h1,
 		h2,
 		p {
@@ -34,10 +33,13 @@
 		}
 	}
 	&__comments {
-		max-width: 80rem;
+		max-width: 90rem;
 		margin: 0 auto;
+		margin-top:20rem;
 	}
 	&__share{
-		width: 80rem;
+		padding: 6rem 0;
+		width: 100%;
 	}
+	
 }
