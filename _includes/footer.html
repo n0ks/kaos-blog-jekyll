@@ -6,7 +6,7 @@
 							<h4>Últimos Posts</h4>
 						</li>
 						{% for post in site.posts limit: 3 %} 
-						<li><a href="{{post.url}}">{{post.title  | upcase}}</a></li>
+						<li><a href="{{post.url}}">{{post.title  | upcase  | truncate: 24, '...' }}</a></li>
 						{% endfor %}
 		
 					</ul>
