@@ -3,29 +3,75 @@ layout: default
 ---
 <!-- <script id="dsq-count-scr" src="//kaos-blog-1.disqus.com/count.js" async></script> -->
 <section class="post">
-	
+
 	<div class="post__banner" style="background: url({{page.thumb}}) no-repeat; background-size: cover">
-		
 		<div class="container text-center">
 			<time datetime="{{page.date}}">
 				{{ page.date | date_to_string }}
-			<!-- Whitespace added for readability -->
+				<!-- Whitespace added for readability -->
 			</time>
 			<h1 class="post__title">{{page.title}}</h1>
 			<div class="post__desc">{{page.description}}</div>
-			
+
 		</div>
 	</div>
+
 	<article class="post__content" role="article">
-			{{content}}
-			<div class="container">
-				<div class="post__share">
-					{% include share_btns.html %}
-				</div>
-			</div>
+		{{content}}
 	</article>
+
+	<div class="container post__share">
+			{% include share_btns.html %}
+	</div>
+	{% include slider_styles.html %}
+
+	<section class="post__relacionados">
+		<h3 class="text-center">Relacionados</h3>
+		<div class="slider__item">
+			{% for post in site.posts limit: 6 %}
+			<div>
+				<div class="slider__link">
+					<p>
+						<a href="{{post.url}}">{{post.title | truncate: 24, '...' }}</a>
+					</p>
+				</div>
+				<a href="{{post.url}}">
+					<img src="{{post.thumb}}" alt="" class="tns-lazy-img slider__img">
+				</a>
+			</div>
+			{% endfor %}
+			<div class="tns-nav"></div>
+		</div>
+	</section>
 
 	<section class="post__comments">
 		{% include disqus.html %}
 	</section>
 </section>
+
+{% include slider_import.html %}
+<!--  Slider configs  -->
+<script>
+	var slider = tns({
+		gutter: 0,
+		items: 1,
+		container: '.slider__item',
+		slideBy: 'page',
+		autoplay: true,
+		mouseDrag: true,
+		controlsText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
+		controlsContainer: false,
+		autoplay: false,
+		responsive: {
+			768: {
+				items: 2,
+				gutter: 10,
+			},
+			900:{
+				items: 3
+			}
+		}
+		// fixedWidth: 500
+		// edgePadding: 50,
+	});
+</script>
