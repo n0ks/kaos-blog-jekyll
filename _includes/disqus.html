@@ -1,9 +1,7 @@
 <!-- 
-     Before you implement this Jekyll Snippet make sure
-     1. to thank css-tricks.com
-     2. define "disqus: DISQUS-SHORTNAME" in _config.yml file.
+	TODO: https://help.disqus.com/troubleshooting/why-are-the-same-comments-showing-up-on-multiple-pages 
+	https://help.disqus.com/developer/javascript-configuration-variables
 -->
-
 <div class="disqus"></div>
 <style>
  .disqus-placeholder.is-hidden { display: none; }
@@ -26,7 +24,7 @@ l(m,q));b.addEventListener("resize",l(m,q));b.disqusLoader=function(a,c){var d={
 		scriptUrl:		'//{{site.disqus}}.disqus.com/embed.js',
 		disqusConfig:	function()
 		{
-			this.page.identifier 	= 'disqus-lazyload';
+			this.page.identifier 	= '{{page.url}}';
 			this.page.url			= '{{page.url | prepend: site.url}}';
 			this.page.title			= '{{page.title}}';
 			this.callbacks.onReady	= [function()
