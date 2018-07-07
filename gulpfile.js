@@ -8,6 +8,7 @@ const prefixer = require('gulp-autoprefixer')
 const imagemin = require('gulp-imagemin')
 const plumber = require('gulp-plumber')
 const sass = require('gulp-sass')
+const sourcemaps = require('gulp-sourcemaps')
 
 const messages = {
 	jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build',
@@ -42,8 +43,10 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], () => {
 gulp.task('sass', () => {
 	return gulp
 		.src('./src/sass/main.scss')
-		.pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+		.pipe(sourcemaps.init())
+		.pipe(sass().on('error', sass.logError))
 		.pipe(prefixer({ browsers: ['last 2 versions'] }))
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('./_site/assets/css/'))
 		.pipe(gulp.dest('assets/css'))
 		.pipe(browserSync.stream())
