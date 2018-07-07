@@ -11,4 +11,4 @@ author: Rogerin
 thumb: http://via.placeholder.com/884x442
 ---
 
-Blablablabla o post n&atilde;o ta publicado ,asdasdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+Blablablabla o post não ta publicado ,asdasdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
