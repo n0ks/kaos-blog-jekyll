@@ -7,7 +7,7 @@
 
 .card {
 	background: $clr-white;
-	height: 33rem;
+	height: 24rem;
 	color: $clr-black-1;
 	border-radius: 4px;
 	margin-bottom: 2rem;
@@ -26,8 +26,8 @@
 	}
 	&__picture {
 		overflow: hidden;
-		height: 33rem;
-		width: 58rem;
+		height: inherit;
+		flex-basis: 30%;
 		position: relative;
 		& a {
 			position: absolute;
@@ -38,7 +38,7 @@
 		}
 		&--img {
 			width: 100%;
-			height: inherit;
+			height: 100%;
 			object-fit: cover;
 			transition: transform 500ms ease;
 			cursor: pointer;
@@ -52,7 +52,7 @@
 		padding: 1.5rem;
 		display: flex;
 		flex-direction: column;
-		flex-basis: 100%;
+		flex-basis: 70%;
 		& .data {
 			font-size: 1.2rem;
 			color: $clr-grey;
