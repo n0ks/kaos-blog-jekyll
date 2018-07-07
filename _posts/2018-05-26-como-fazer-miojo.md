@@ -4,7 +4,7 @@ title: Rogerin é god ?
 description: sit amet consectetur adipisicing elit. Fugiat, laborum quas. Nam culpa voluptates quaerat adipisci laborum 
 categories: god
 author: Rogerin
-thumb: https://cdn.wccftech.com/wp-content/uploads/2017/06/god-of-war-screen-05-ps4-us-12jun17.jpg
+thumb: http://via.placeholder.com/884x442
 ---
 
 # Titulo dentro do POST do rogerin tortão

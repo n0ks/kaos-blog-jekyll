@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Não cabasssssooooooooooooooooooo
 description: >-
   sit amet consectetur adipisicing elit. Fugiat, laborum quas. Nam culpa
@@ -8,7 +8,7 @@ categories:
   - god
   - test
 author: Rogerin
-thumb: 'https://i.ytimg.com/vi/2a4Uxdy9TQY/maxresdefault.jpg'
+thumb: http://via.placeholder.com/884x442
 ---
 
 Blablablabla o post n&atilde;o ta publicado ,asdasdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd

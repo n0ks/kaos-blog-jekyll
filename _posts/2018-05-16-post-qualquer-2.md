@@ -4,7 +4,7 @@ title: testando
 description: testando
 categories: food
 author: Rodrigo M.
-thumb: https://baconmockup.com/600/300
+thumb: http://via.placeholder.com/884x442
 ---
 
 # Titulo dentro do POST

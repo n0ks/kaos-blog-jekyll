@@ -4,7 +4,7 @@ title: Second Post
 description: simple description 2
 categories: tech test
 author: Rodrigo M.
-thumb: /assets/img/2018-05/second-post.jpeg
+thumb: http://via.placeholder.com/884x442
 ---
 
 Its working
