@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 {%seo%}
+
 <head>
+
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width={device-width}, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta http-equiv="content-language" content="pt-br">
+	<meta http-equiv="cache-control" content="public">
+	<meta http-equiv="expires" content="86400">
 	<meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}"
-	/> 
+	/>
 	<!-- <title> {%if page.title %} {{ page.title }} {% else %} {{ site.title }} {% endif %}</title> -->
 	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/main.css">
-	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
-	{% include font.html %}
+	
+	 {% include font.html %}
+	<script>
+		var stylesheet = document.createElement('link');
+		stylesheet.href = 'https://use.fontawesome.com/releases/v5.0.6/css/all.css';
+		stylesheet.rel = 'stylesheet';
+		stylesheet.type = 'text/css';
+		// temporarily set media to something inapplicable to ensure it'll fetch without blocking render
+		stylesheet.media = 'only x';
+		// set the media back when the stylesheet loads
+		stylesheet.onload = function () {
+			stylesheet.media = 'all'
+		}
+		document.getElementsByTagName('head')[0].appendChild(stylesheet);
+	</script>
 </head>
+
 <body>
 	{% include nav.html %}
-	{{content}}
+	 {{content}} 
 	{% include footer.html %}
 
-	<script src="{{site.baseurl}}/assets/js/bundle.js"></script>
+	<script src="{{site.baseurl}}/assets/js/bundle.js" async="true"></script>
 </body>
+
 </html>
