@@ -1,7 +1,8 @@
 #Site options
 name: Kaos Blog
 email: contato@kaos.com.br
-url: http://localhost:3000
+baseurl: ""
+url: "http://localhost:3000"
 facebook: 
   publisher: https://www.facebook.com/fratkaos/
 

@@ -28,6 +28,7 @@
 		"xo": "^0.20.3"
 	},
 	"dependencies": {
+		"gulp-sourcemaps": "^2.6.4",
 		"sanitize.css": "^5.0.0"
 	},
 	"xo": {
