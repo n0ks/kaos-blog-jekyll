@@ -17,14 +17,14 @@
 	},
 	"homepage": "https://github.com/n0ks/kaos-blog-jekyll#readme",
 	"devDependencies": {
-		"browser-sync": "^2.24.4",
+		"browser-sync": "^2.24.5",
 		"gulp": "^3.9.1",
 		"gulp-autoprefixer": "^5.0.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-imagemin": "^4.1.0",
 		"gulp-plumber": "^1.2.0",
 		"gulp-sass": "^4.0.1",
-		"gulp-uglify-es": "^1.0.1",
+		"gulp-uglify-es": "^1.0.4",
 		"xo": "^0.20.3"
 	},
 	"dependencies": {
