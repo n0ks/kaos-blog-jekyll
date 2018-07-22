@@ -3,6 +3,9 @@
 	margin-top: 25vh;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	@include mobile {
+		justify-content: center;
+	}
 }
 
 .card {
@@ -47,6 +50,9 @@
 				transition: transform 500ms ease;
 			}
 		}
+		@include mobile {
+			flex-basis: 50%;
+		}
 	}
 	&__content {
 		padding: 1.5rem;
@@ -56,6 +62,9 @@
 		& .data {
 			font-size: 1.2rem;
 			color: $clr-grey;
+		}
+		@include mobile {
+			flex-basis: 50%;
 		}
 	}
 	&__author {
@@ -74,5 +83,11 @@
 			color: $clr-grey;
 			margin-right: .5rem;
 		}
+	}
+	@include mobile {
+		flex-direction: column;
+		height: 42rem;
+		flex-basis: 85%;
+		justify-content: center;
 	}
 }

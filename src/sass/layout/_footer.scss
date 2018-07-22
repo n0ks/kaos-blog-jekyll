@@ -14,7 +14,7 @@
 		text-decoration: none;
 	}
 	>* {
-		flex-basis: 280px;
+		flex-basis: 240px;
 		&:not(:first-child) {
 			padding-left: 5rem;
 			border-left: 1px solid rgba($clr-grey, .2);
