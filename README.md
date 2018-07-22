@@ -4,6 +4,9 @@
 - [Ruby 2.3.3 p222](https://rubyinstaller.org/downloads/)
 - [Setup](http://jekyll-windows.juthilo.com/)
 
+## 22/07/2018
+- Fixado alguns estilos
+
 ## 01/07/2018
 - Slider adicionado na página de posts 
 
