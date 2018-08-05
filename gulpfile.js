@@ -14,8 +14,7 @@ const messages = {
 	jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build',
 }
 
-
-gulp.task('jekyll-build', (done) => {
+gulp.task('jekyll-build', done => {
 	browserSync.notify(messages.jekyllBuild)
 	return cp
 		.spawn('bundle.bat', ['exec', 'jekyll', 'build'], {
@@ -45,7 +44,7 @@ gulp.task('sass', () => {
 		.src('./src/sass/main.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
-		.pipe(prefixer({ browsers: ['last 2 versions'] }))
+		.pipe(prefixer({browsers: ['last 2 versions']}))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('./_site/assets/css/'))
 		.pipe(gulp.dest('assets/css'))
@@ -66,7 +65,7 @@ gulp.task('imagemin', () => {
 	return gulp
 		.src('./src/img/**/*')
 		.pipe(plumber())
-		.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+		.pipe(imagemin({optimizationLevel: 5, progressive: true, interlaced: true}))
 		.pipe(gulp.dest('./_site/assets/img/'))
 		.pipe(gulp.dest('./assets/img/'))
 })
@@ -75,7 +74,10 @@ gulp.task('watch', () => {
 	gulp.watch('./src/sass/**/*.scss', ['sass'])
 	gulp.watch('./src/js/**/*.js', ['js'])
 	gulp.watch('./src/img/**/*.{jpg,png,gif,svg}', ['imagemin'])
-	gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*'],	['jekyll-rebuild'])
+	gulp.watch(
+		['*.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*'],
+		['jekyll-rebuild']
+	)
 })
 
 gulp.task('default', ['sass', 'js', 'imagemin', 'browser-sync', 'watch'])
