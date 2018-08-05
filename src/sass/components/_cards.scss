@@ -10,7 +10,7 @@
 
 .card {
 	background: $clr-white;
-	height: 24rem;
+	min-height: 24rem;
 	color: $clr-black-1;
 	border-radius: 4px;
 	margin-bottom: 2rem;
@@ -67,6 +67,9 @@
 			flex-basis: 50%;
 		}
 	}
+	&__excerpt {
+		padding: .675rem 0;
+	}
 	&__author {
 		margin-right: 2rem;
 	}
@@ -86,8 +89,8 @@
 	}
 	@include mobile {
 		flex-direction: column;
-		height: 42rem;
-		flex-basis: 85%;
+		height: 100%;
+		flex-basis: 90%;
 		justify-content: center;
 	}
 }
