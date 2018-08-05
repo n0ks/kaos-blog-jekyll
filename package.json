@@ -19,6 +19,7 @@
 	"devDependencies": {
 		"browser-sync": "^2.24.5",
 		"commitizen": "^2.10.1",
+		"cz-conventional-changelog": "^2.1.0",
 		"gulp": "^3.9.1",
 		"gulp-autoprefixer": "^5.0.0",
 		"gulp-concat": "^2.6.1",
@@ -41,8 +42,8 @@
 		]
 	},
 	"config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  }
+		"commitizen": {
+			"path": "./node-modules/cz-conventional-changelog"
+		}
+	}
 }
