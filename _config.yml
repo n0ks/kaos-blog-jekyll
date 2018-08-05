@@ -1,6 +1,6 @@
 #Site options
 name: Kaos Blog
-email: contato@kaos.com.br
+email: adm@kaos.com.br
 baseurl: ""
 url: "http://localhost:3000"
 facebook: 
@@ -15,7 +15,7 @@ plugins:
 - jekyll-seo-tag
 - jekyll-paginate
 
-paginate: 2
+paginate: 4
 paginate_path: /noticias/page-:num/
 
 exclude: ['*.json', 'src', 'node_modules','gulpfile.js','Gemfile','Gemfile.lock','README.md']
