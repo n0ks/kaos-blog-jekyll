@@ -18,6 +18,7 @@
 	"homepage": "https://github.com/n0ks/kaos-blog-jekyll#readme",
 	"devDependencies": {
 		"browser-sync": "^2.24.5",
+		"commitizen": "^2.10.1",
 		"gulp": "^3.9.1",
 		"gulp-autoprefixer": "^5.0.0",
 		"gulp-concat": "^2.6.1",
@@ -38,5 +39,10 @@
 		"env": [
 			"browser"
 		]
-	}
+	},
+	"config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
 }
