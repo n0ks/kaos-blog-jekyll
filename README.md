@@ -4,6 +4,9 @@
 - [Ruby 2.3.3 p222](https://rubyinstaller.org/downloads/)
 - [Setup](http://jekyll-windows.juthilo.com/)
 
+## 05/08/2018
+- Página de notícias
+
 ## 22/07/2018
 - Fixado alguns estilos
 
