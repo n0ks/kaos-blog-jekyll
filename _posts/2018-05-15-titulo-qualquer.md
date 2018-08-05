@@ -4,7 +4,7 @@ title: Titulo simples
 description: alo alo alo
 categories: comida
 author: Rodrigo M.
-thumb: http://via.placeholder.com/884x442
+thumb: http://via.placeholder.com/1280x720
 ---
 
 # Titulo dentro do POST

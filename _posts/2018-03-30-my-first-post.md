@@ -4,7 +4,7 @@ title: First Post
 description: simple description
 categories: tech
 author: Rodrigo M.
-thumb: http://via.placeholder.com/884x442
+thumb: http://via.placeholder.com/1280x720
 ---
 Testando 123
 

@@ -8,7 +8,7 @@ categories:
   - god
   - test
 author: Rogerin
-thumb: http://via.placeholder.com/884x442
+thumb: http://via.placeholder.com/1280x720
 ---
 
 Blablablabla o post não ta publicado ,asdasdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
